@@ -1,2 +1,2 @@
-# Kubernetes-Microservices
-demonstrates how to run Microservices on Kubernetes.
+# wishlist
+Sample wishlist application to demo microservices with containers running in Kubernetes.

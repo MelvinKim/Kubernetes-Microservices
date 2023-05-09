@@ -1,0 +1,14 @@
+FROM golang
+
+LABEL maintainer="Melvin Kimathi"
+
+COPY . /go/src/github.com/MelvinKim/wishlist
+
+WORKDIR /go/src/github.com/MelvinKim/wishlist/products
+
+RUN go get github.com/prometheus/client_golang/prometheus
+RUN go get github.com/prometheus/client_golang/prometheus/promhttp
+RUN go get github.com/gorilla/mux
+RUN go get && go build -o /bin/products
+
+ENTRYPOINT ["/bin/products"]
